@@ -2,33 +2,7 @@
 <Document xmlns:p="property" Id="TdB0ZNDZV5XQHa8waXkll4" LanguageVersion="2020.1.0.53" Version="0.128">
   <NugetDependency Id="KgdW9FE2l7zOXgz0avsW0p" Location="VL.CoreLib" Version="2020.1.0" />
   <Patch Id="PQGKgZIFtq3NAMYz3DonSh">
-    <Canvas Id="V3qMM1NGt4HPs0IO8mDVjH" DefaultCategory="Main" CanvasType="FullCategory">
-      <!--
-
-    ************************ midiou ************************
-
--->
-      <Node Name="midiou" Bounds="200,100" Id="SnkPSu2kYaiMCQZDKQtPJJ">
-        <p:NodeReference>
-          <Choice Kind="ContainerDefinition" Name="Process" />
-          <FullNameCategoryReference ID="Primitive" />
-        </p:NodeReference>
-        <Patch Id="Pz5wqoM36kbO0lNDGVTw6R">
-          <Canvas Id="DAGrvtdl857OlpqZ1Opa1P" BordersChecked="false" CanvasType="Group" />
-          <Patch Id="AwunZrkXIFOOd9qFXRmS3s" Name="Create" />
-          <Patch Id="BNnPJATLMvjMogyv5IId96" Name="Update" />
-          <!--
-
-    ************************  ************************
-
--->
-          <ProcessDefinition Id="RMPwPZaF8d0NFiRdcz7t4d">
-            <Fragment Id="LUPAVuVfJaBM4XQVYQGiNq" Patch="AwunZrkXIFOOd9qFXRmS3s" Enabled="true" />
-            <Fragment Id="UbIxB0gqINZMI0ZEPpWQgy" Patch="BNnPJATLMvjMogyv5IId96" Enabled="true" />
-          </ProcessDefinition>
-        </Patch>
-      </Node>
-    </Canvas>
+    <Canvas Id="V3qMM1NGt4HPs0IO8mDVjH" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
@@ -46,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="B98kbdIs4VRPni9jhoWmwB" Name="Bounds" Kind="InputPin" DefaultValue="1282, 73, 577, 403">
+            <Pin Id="B98kbdIs4VRPni9jhoWmwB" Name="Bounds" Kind="InputPin" DefaultValue="1910, 72, 577, 403">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -211,21 +185,6 @@
               <Choice Kind="TypeFlag" Name="MidiOutputDevice" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="243,180,51,19" Id="AU6UlwlraTOMfgmeC3AcRa">
-            <p:NodeReference LastCategoryFullName="IO.Midi.Messages" LastSymbolSource="VL.IO.Midi.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="NoteOn" />
-            </p:NodeReference>
-            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
-            <Pin Id="Fu89TNMpfPLO91yGngQLFv" Name="Channel" Kind="InputPin" />
-            <Pin Id="OU2bcWSJVBdMpjQYdUGAAa" Name="Note Number" Kind="InputPin" />
-            <Pin Id="SSyNFWBKbp1L8sqkJC6Lbu" Name="Velocity" Kind="InputPin" DefaultValue="1">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Float32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="QFblyRmzPegN8r2Pfzf6gd" Name="Result" Kind="OutputPin" />
-          </Node>
           <Node Bounds="244,224,79,19" Id="MKQspQ4IxMaL43sHowNh5Q">
             <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -237,6 +196,20 @@
             <Pin Id="RxfILNcJnEcMRoZH0rK6Rd" Name="Result" Kind="OutputPin" />
           </Node>
           <ControlPoint Id="N73Pjo0J76WMdfNBHIj046" Bounds="318,96" />
+          <Node Bounds="219,161,51,19" Id="BIEzhGP56NLPW15HbT5Jc9">
+            <p:NodeReference LastCategoryFullName="IO.Midi.Messages" LastSymbolSource="VL.IO.Midi.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="NoteOn" />
+            </p:NodeReference>
+            <Pin Id="L2ixnDa12bMP3n6MdXz1V6" Name="Channel" Kind="InputPin" />
+            <Pin Id="JCA9yiIY9HnNlmmLjZMVQb" Name="Note Number" Kind="InputPin" />
+            <Pin Id="TJtbBMiahNVLOZi1SmMXWL" Name="Velocity" Kind="InputPin" DefaultValue="1">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="PT3ArXUIWpeLevkamgrxAI" Name="Result" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="TzCsxRAmY1kNNVUYjRhDE3" Name="Create" />
         <Patch Id="JAG8LWxNLvOMHgF6I6ohht" Name="Update" />
@@ -256,9 +229,9 @@
         <Link Id="TiELyC44pVKLywcBmW7Ac7" Ids="AeWwPNlrhXbLPvQ0BENmgb,JHqqaYxiATsLZDQlHgSSNW" />
         <Link Id="QPbZ42dFJwfPRtHc8280zt" Ids="PeuaLnm211PPmofMMWBbB4,Pw68xbQeUY8LTeYKwy5sOB" />
         <Link Id="S6d7ijU4LlJQUvNOlTI6Pg" Ids="PrnTmrx0UDvNGmBxpTbe3f,BSAvurjyhrfPDIcGy1diQD" />
-        <Link Id="V7tkEeaQAs6MGWxaM42ZRI" Ids="QFblyRmzPegN8r2Pfzf6gd,MwDCbAIwtDdMYOWVe1QHDv" />
         <Link Id="Ceyl3R9KlQxOQuKV2nRb6t" Ids="RxfILNcJnEcMRoZH0rK6Rd,Atj1BHu7ikmMrY0pL2DcUt" />
         <Link Id="De61SZiip0VLIWH3u6Gg39" Ids="AWYeGULo1QhM2raqsxbBcy,N73Pjo0J76WMdfNBHIj046,Kc8Jy6bb7oSMvD4GH1O131" />
+        <Link Id="QHhjlHDnrwiOgy0DKfN9DD" Ids="PT3ArXUIWpeLevkamgrxAI,MwDCbAIwtDdMYOWVe1QHDv" />
       </Patch>
     </Node>
   </Patch>
